@@ -1,0 +1,9 @@
+.popular-main {
+  padding: 2rem;
+}
+
+.popular-main h1 {
+  font-family: 'Inconsolata Regular';
+  text-transform: uppercase;
+  font-size: 2.1rem;
+}

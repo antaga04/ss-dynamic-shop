@@ -1,0 +1,94 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+
+  /* ---- MAIN COLORS ---- */
+  --ss-light-color: #F9F9F9;
+  --ss-dark-color: #383838;
+  --ss-special-green: #65D46E;
+  --ss-special-grey: #191919;
+  --ss-typography-color-light: #FFFFFF;
+  --ss-typography-color-dark: #FFFFFF;
+
+  --ss-card-background-color: #FFFFFF;
+  /* ---- MEASUREMENTS ---- */
+  --ss-border-radius: .5rem;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  /* font-family: 'Myriad Pro Regular';
+  font-family: 'Inconsolata Regular'; */
+  /* font-family: 'Lato', sans-serif; */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+  font-family: Helvetica;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: lowercase;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#app {
+  width: 100%;
+}
+
+main {
+  min-height: 83vh;
+  color: #222;
+  font-family: 'Myriad Pro Regular';
+
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #ffffff;
+    background-color: #ffffff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}

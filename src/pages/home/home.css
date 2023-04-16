@@ -1,0 +1,16 @@
+.h-main {
+  min-height: 80vh;
+  /* background-color: rgb(67, 67, 169); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-hero {
+  border: 3px solid #0CC79E;
+  width: 93vw;
+  height: 65vh;
+  object-fit: cover;
+  object-position: top;
+  /* border-radius: .8rem; */
+}
