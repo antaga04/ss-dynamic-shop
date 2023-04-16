@@ -1,8 +1,9 @@
 import "./shop.css";
 import { Data } from "../../utils/albumsData";
-import { AlbumList } from "../../components/AlbumsList/AlbumsList";
+// import { AlbumList } from "../../components/AlbumsList/AlbumsList";
 import { Header } from "../../Components/header/header";
 import { Footer } from "../../Components/footer/footer";
+import { AlbumList } from "../../Components/AlbumsList/AlbumsList";
 
 export const Shop = (list) => {
   const app = document.querySelector("#app");
