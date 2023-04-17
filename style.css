@@ -84,13 +84,14 @@ main {
 }
 
 .ss-noise {
-
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #ffffff;
     background-color: #fdfcfc;
+    background-color: #fff;
   }
 
   main {

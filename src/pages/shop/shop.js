@@ -6,7 +6,7 @@ import { Footer } from "../../Components/footer/footer";
 import { AlbumList } from "../../Components/AlbumsList/AlbumsList";
 
 export const Shop = (list) => {
-  const app = document.querySelector("#app");
+  
   app.innerHTML = "";
   const main = document.createElement("main");
   app.innerHTML = Header();
@@ -17,4 +17,9 @@ export const Shop = (list) => {
   app.innerHTML += Footer();
 };
 
-
+const app = document.querySelector("#app");
+app.addEventListener('change', ev=>{
+  if(ev.target.matches('input')){
+    
+  }
+})

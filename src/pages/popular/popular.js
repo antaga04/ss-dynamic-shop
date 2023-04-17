@@ -10,7 +10,7 @@ export const Popular = () => {
 
   main.innerHTML = `
     <div class="popular-main">
-      <h1>Popular</h1>
+      <h1>Top Sales</h1>
       <div>
         hola buenas tarde puto
       </div>

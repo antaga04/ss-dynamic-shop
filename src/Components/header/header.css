@@ -30,9 +30,9 @@
 
 /* ----- LEFT SIDE ----- */
 
-.logo {
+.logo > a{
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: .5rem;
 }
 
@@ -96,6 +96,14 @@
   font-size: .9rem;
   text-transform: uppercase;
   letter-spacing: .15em;
+}
+
+.nav>li>a {
+  transition: all .25s ease-in-out;
+}
+
+.nav>li>a:hover {
+  color: rgb(97, 97, 97);
 }
 
 .menu-btn {

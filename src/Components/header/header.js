@@ -17,8 +17,10 @@ export const Header = () => {
         <section class="header-container">
           <article class="header-side left-side">
             <div class="logo">
-              <a href="#"><img src="https://res.cloudinary.com/drsfru9lj/image/upload/v1681568524/Rock%20Shop/solid-sounds-logo_vwl7d8.png" alt="SolidSounds Logo"></a>
-              <a href="#"><h1>Solid Sounds</h1></a>
+              <a href="/" onclick="location.reload()">
+                <img src="https://res.cloudinary.com/drsfru9lj/image/upload/v1681568524/Rock%20Shop/solid-sounds-logo_vwl7d8.png" alt="SolidSounds Logo">
+                <h1>Solid Sounds</h1>
+              </a>
             </div>
 
             <article class="menu-container">
@@ -27,7 +29,7 @@ export const Header = () => {
                 <ul class="flex nav">
                   <li><a id="homeLink" href="#home">Home</a></li>
                   <li><a id="shopLink" href="#shop">Shop</a></li>
-                  <li><a id="popularLink" href="#topsales">Top Sales</a></li>
+                  <li><a id="popularLink" href="#topsales">Top-Sales</a></li>
                   <li><a id="aboutLink" href="#about">About</a></li>
                 </ul>
               </div>
@@ -50,7 +52,7 @@ const app = document.querySelector("#app");
 app.addEventListener("click", (event) => {
   if (event.target.matches(".menu-btn")) {
     const dropMenu = document.querySelector(".drop-menu");
-    const menuContent = document.querySelector('.mobile-menu')
+    const menuContent = document.querySelector(".mobile-menu");
     console.log("yes");
     dropMenu.classList.toggle("menu-mode");
     menuContent.classList.toggle("menu-mode");
