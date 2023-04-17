@@ -78,20 +78,19 @@ main {
   align-items: center;
   gap: 1rem;
 }
-.flex-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .hidden {
   display: none;
 }
 
+.ss-noise {
+
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #ffffff;
-    background-color: #ffffff;
+    background-color: #fdfcfc;
   }
 
   main {

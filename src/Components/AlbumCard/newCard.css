@@ -1,20 +1,21 @@
 .album-card>img {
-  width: 12rem;
-  height: 12rem;
+  width: 11.2rem;
+  height: 10.4rem;
   object-fit: cover;
-  border-radius: var(--ss-border-radius);
 }
+
+/* 34,375 */
+/* 31,375 */
 
 .album-card {
   position: relative;
-  width: 12rem;
-  height: 18rem;
+  /* width: 12rem; 
+  height: 18rem;  */
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: .5rem;
   background-color: var(--ss-card-background-color);
-  border-radius: var(--ss-border-radius);
   box-shadow: 0 0 transparent, 0 0 transparent, 0 0.2rem 0.4rem rgba(0, 0, 0, .05);
   transition: all 0.1s ease-in-out;
 }
@@ -34,4 +35,11 @@
   width: 100%;
   height: auto;
   opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .album-card>img {
+    width: 5.6rem;
+    height: 5.2rem;
+  }
 }
