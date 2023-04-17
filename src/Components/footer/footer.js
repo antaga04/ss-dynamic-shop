@@ -8,10 +8,10 @@ export const Footer = () => {
       </div>
       <div>
         <ul class="flex social-icons">
-          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
       </div>
       <div class="right-footer">

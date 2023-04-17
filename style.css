@@ -4,7 +4,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
+  background-color: #B6B6B6;
+  /* background-color: #222; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -69,13 +71,17 @@ main {
   min-height: 83vh;
   color: #222;
   font-family: 'Myriad Pro Regular';
-
 }
 
 .flex {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+.flex-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
@@ -86,6 +92,10 @@ main {
   :root {
     color: #ffffff;
     background-color: #ffffff;
+  }
+
+  main {
+    color: #222;
   }
 
   button {

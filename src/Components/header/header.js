@@ -6,8 +6,8 @@ export const Header = () => {
       <section class="header-container">
         <article class="header-side">
           <aricle class="logo">
-            <a href=""><img src="https://res.cloudinary.com/drsfru9lj/image/upload/v1681568524/Rock%20Shop/solid-sounds-logo_vwl7d8.png" alt="SolidSounds Logo"></a>
-            <h1>Solid Sounds</h1>
+            <a href="#"><img src="https://res.cloudinary.com/drsfru9lj/image/upload/v1681568524/Rock%20Shop/solid-sounds-logo_vwl7d8.png" alt="SolidSounds Logo"></a>
+            <a href="#"><h1>Solid Sounds</h1></a>
           </aricle>
 
           <article class="menu-container">
