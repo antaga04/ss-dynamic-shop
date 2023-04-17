@@ -1,25 +1,18 @@
 import "./shop.css";
 import { Data } from "../../utils/albumsData";
-// import { AlbumList } from "../../components/AlbumsList/AlbumsList";
 import { Header } from "../../Components/header/header";
 import { Footer } from "../../Components/footer/footer";
 import { AlbumList } from "../../Components/AlbumsList/AlbumsList";
 
-export const Shop = (list) => {
-  
-  app.innerHTML = "";
-  const main = document.createElement("main");
-  app.innerHTML = Header();
+const app = document.querySelector("#app");
+const main = document.createElement("main");
 
+export const Shop = (list) => {
+  app.innerHTML = "";
+  app.innerHTML = Header();
+  main.classList.add('fade-in')
   main.innerHTML = AlbumList(Data);
 
   app.appendChild(main);
   app.innerHTML += Footer();
 };
-
-const app = document.querySelector("#app");
-app.addEventListener('change', ev=>{
-  if(ev.target.matches('input')){
-    
-  }
-})

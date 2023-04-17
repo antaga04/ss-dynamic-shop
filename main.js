@@ -5,6 +5,8 @@ import { linkPage } from "./src/utils/linkPage";
 import { About } from "./src/pages/about/about";
 import { Popular } from "./src/pages/popular/popular";
 import { Cart } from "./src/pages/cart/cart";
+import { Data } from "./src/utils/albumsData";
+import { AlbumList } from "./src/Components/AlbumsList/AlbumsList";
 
 Home();
 linkPage("#homeLink", Home);
@@ -13,3 +15,22 @@ linkPage("#popularLink", Popular);
 linkPage("#aboutLink", About);
 linkPage("#cartLink", Cart);
 
+const app = document.querySelector("#app");
+
+app.addEventListener("change", (ev) => {
+  if (ev.target.matches('input[type="text"]')) {
+    filterAlbums(Data, ev.target.value);
+    // console.log(ev.target.value);
+  }
+});
+
+const filterAlbums = (list, keyword) => {
+  const filteredAlbums = list.filter(
+    (item) =>
+      item.name.toLowerCase().includes(keyword.toLowerCase()) ||
+      item.artist.toLowerCase().includes(keyword.toLowerCase())
+  );
+  const oldMain = document.querySelector('main')
+  oldMain.innerHTML = "";
+  oldMain.innerHTML = AlbumList(filteredAlbums);
+};

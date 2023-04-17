@@ -5,8 +5,9 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
-  background-color: #B6B6B6;
   /* background-color: #222; */
+  /* background-color: #B6B6B6; */
+  background-color: #e5e1e1;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,6 +25,8 @@
   --ss-typography-color-dark: #FFFFFF;
 
   --ss-card-background-color: #FFFFFF;
+
+  --ss-card-color: #e5e1e1;
   /* ---- MEASUREMENTS ---- */
   --ss-border-radius: .5rem;
 }
@@ -48,6 +51,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
 }
 
 h1 {
@@ -68,7 +72,7 @@ a {
 }
 
 main {
-  min-height: 83vh;
+  min-height: 83.3vh;
   color: #222;
   font-family: 'Myriad Pro Regular';
 }
@@ -92,6 +96,8 @@ main {
     color: #ffffff;
     background-color: #fdfcfc;
     background-color: #fff;
+    
+    --ss-card-color: #FFFFFF;
   }
 
   main {
@@ -101,4 +107,19 @@ main {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
 }
