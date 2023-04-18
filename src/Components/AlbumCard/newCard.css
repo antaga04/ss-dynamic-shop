@@ -1,6 +1,6 @@
 .album-card>img {
-  width: 11.2rem;
-  height: 10.4rem;
+  width: 14.56rem;
+  height: 13.52rem;
   object-fit: cover;
 }
 
@@ -11,16 +11,14 @@
   flex-direction: column;
   gap: .5rem;
   background-color: var(--ss-card-color);
+  /* background-color: #348D90; */
   box-shadow: 0 0 transparent, 0 0 transparent, 0 0.2rem 0.4rem rgba(0, 0, 0, .05);
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .album-card:hover {
   box-shadow: 0 0 transparent, 0 0 transparent, 0 0.9rem 1.6rem rgba(0, 0, 0, .2);
-}
-
-.album-card * {
-  color: #222;
+  transform: scale(1.01);
 }
 
 .super {
@@ -32,9 +30,52 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 500px) {
-  .album-card>img {
-    width: 5.6rem;
-    height: 5.2rem;
+@media screen and (max-width: 768px) {
+  .album-card {
+    min-width: 12.2rem;
   }
+
+  .album-card>img {
+    /* width: 11.2rem;
+    height: 10.4rem; */
+    width: 10.08rem;
+    height: 9.36rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .album-card {
+    padding: .3rem;
+  }
+
+  /* .album-card h3, */
+  .album-card h5 {
+    display: none;
+  }
+
+  .album-card>img {
+    /* width: 5.6rem;
+    height: 5.2rem; */
+    width: 9.33rem;
+    height: 8.67rem;
+  }
+}
+
+.buy-btn--container>button{
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 900;
+  text-align: center;
+  background-color: rgba(255, 215, 18, 1);
+  border: none;
+  padding: .5rem .6rem;
+  transition: all .2s ease-in-out;
+  /* bottom: 35%;
+  right: 15%;
+  position: absolute; */
+}
+
+.buy-btn--container>button:hover {
+  background-color: rgba(255,164,28, 1);
 }

@@ -7,6 +7,10 @@ export const AlbumCard = (album) => {
       <img class="super" src="https://res.cloudinary.com/drsfru9lj/image/upload/v1681747699/Rock%20Shop/tl_izzt88.webp" alt="cover">
       <h3>${album.name}</h3>
       <h5>${album.artist}</h5>
+      <p>${album.price}€</p>
+      <div class="buy-btn--container">
+        <button>Add to Cart</i></button>
+      </div>
     </article>
   `;
 };
