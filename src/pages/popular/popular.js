@@ -12,7 +12,7 @@ export const Popular = () => {
     <div class="popular-main">
       <h1>Top Sales</h1>
       <div>
-        hola buenas tarde puto
+        Comming soon...
       </div>
     </div>
   `;
