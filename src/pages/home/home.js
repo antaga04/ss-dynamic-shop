@@ -42,10 +42,11 @@ export const Home = () => {
   app.appendChild(main);
 
   const albumList = document.querySelector('.album-list');
-  albumList.style.padding = '0 2rem 2rem 2rem';
+  albumList.style.padding = '0 1rem 2rem 1rem';
 
   const outerAlbumList = document.querySelector('#album-list');
-  outerAlbumList.style.padding = '0 2rem 2rem 2rem';
+  outerAlbumList.style.padding = '0';
+  
 
   app.innerHTML += Footer();
 };

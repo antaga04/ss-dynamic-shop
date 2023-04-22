@@ -19,6 +19,7 @@
 .album-card:hover {
   box-shadow: 0 0 transparent, 0 0 transparent, 0 0.9rem 1.6rem rgba(0, 0, 0, .2);
   transform: scale(1.01);
+  /* transform: scale(0.99); */
 }
 
 .super {
@@ -31,13 +32,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .album-card {
-    min-width: 12.2rem;
-  }
-
   .album-card>img {
-    /* width: 11.2rem;
-    height: 10.4rem; */
     width: 10.08rem;
     height: 9.36rem;
   }
@@ -45,17 +40,14 @@
 
 @media screen and (max-width: 500px) {
   .album-card {
-    padding: .3rem;
+    padding: .6rem;
   }
 
-  /* .album-card h3, */
   .album-card h5 {
     display: none;
   }
 
   .album-card>img {
-    /* width: 5.6rem;
-    height: 5.2rem; */
     width: 9.33rem;
     height: 8.67rem;
   }
@@ -71,9 +63,6 @@
   border: none;
   padding: .5rem .6rem;
   transition: all .2s ease-in-out;
-  /* bottom: 35%;
-  right: 15%;
-  position: absolute; */
 }
 
 .buy-btn--container>button:hover {

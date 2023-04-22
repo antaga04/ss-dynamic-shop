@@ -1,16 +1,15 @@
-.album-list {
-  width: 80vw;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(266px, 1fr));
-  gap: 1rem;
-}
-
 #album-list {
-  padding: 2rem;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   place-items: center;
+}
+
+.album-list {
+  padding: 2rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 #album-list>h2 {

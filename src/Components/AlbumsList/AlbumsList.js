@@ -20,7 +20,7 @@ export const AlbumList = (list, names, number, indexes) => {
   return `
     <article class="ss-noise">    
       <section id="album-list">
-        <section class="album-list">
+        <section class="album-list flex">
           ${filteredList.map((album) => AlbumCard(album)).join("")}
         </section>
       </section>
