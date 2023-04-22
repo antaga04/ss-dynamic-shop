@@ -1,43 +1,3 @@
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: .5rem;
-}
-
-#filters {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(34, 34, 34, .8);
-}
-
-.filters-wrapper {
-  height: 100vh;
-  /* background-color: #D8D1C1; */
-}
-
-/* ---- BUTTON ---- */
-.filter-btn {
-  width: 4.4rem;
-  padding: .3rem;
-  background-color: #0CC79E;
-  color: var(--ss-dark-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  margin-top: .5rem;
-}
-
-.filter-btn>button {
-  border: none;
-  background: transparent;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
 /* ---- FILTER-LIST ---- */
 .filters-list {
   width: 80vw;
@@ -55,32 +15,33 @@
   margin: 0;
 }
 
-.filters-list label {
+/* .filters-list label {
   color: #fff;
-}
-
-.filters-list input {
-  content: "\2714";
-}
+} */
 
 .checkBoxBtn {
   border: none;
   background: transparent;
   font-weight: 600;
+  color: #fff;
 
   display: flex;
   align-items: center;
   gap: .3rem;
   width: 100%;
   padding: 0 .3rem;
+  border-radius: .3rem;
 }
 
 .checkBoxBtn * {
   padding: .3rem 0;
+  font-size: 1rem;
+  text-transform: capitalize;
 }
 
 .checkBoxBtn:hover {
-  background-color: #E4DDCB;
+  color: #0CC79E;
+  /* border: 1px solid #0CC79E; */
 }
 
 .filters-list h4 {

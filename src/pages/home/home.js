@@ -39,19 +39,13 @@ export const Home = () => {
   `;
 
   main.innerHTML += AlbumList(Data, homeAlbums);
-
   app.appendChild(main);
+
+  const albumList = document.querySelector('.album-list');
+  albumList.style.padding = '0 2rem 2rem 2rem';
+
+  const outerAlbumList = document.querySelector('#album-list');
+  outerAlbumList.style.padding = '0 2rem 2rem 2rem';
+
   app.innerHTML += Footer();
 };
-
-{
-  /* <a id="shopLink" class="discover-btn" href="#shop" style="">
-        <div>
-          <p>Discover now all</p>
-          <p>CDs avaliable</p>
-        </div>
-        <div class="shop-btn flex">
-          <p>Shop now</p>
-        </div>
-      </a> */
-}

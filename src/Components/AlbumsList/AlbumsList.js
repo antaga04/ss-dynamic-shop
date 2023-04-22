@@ -1,6 +1,5 @@
 import "./newList.css";
 import { AlbumCard } from "../AlbumCard/AlbumCard";
-import { Filters } from "../Filters/Filters";
 
 export const AlbumList = (list, names, number, indexes) => {
   let filteredList = [];
@@ -28,15 +27,3 @@ export const AlbumList = (list, names, number, indexes) => {
     </article>
   `;
 };
-
-{
-  /* <h2>Aumenta el volumen y haz que el rock se escuche</h2> ${Filters()}*/
-}
-
-// <div>Yes bitch</div>
-// ${indices.map((index) => AlbumCard(list[index])).join("")}
-// ${albums.map((album) => AlbumCard(album).join("")}
-// ${list.slice(0, number).map((album) => AlbumCard(album)).join("")}
-/* 
-${list.filter((album) => AlbumCard(albums.includes(album.name))).join("")}    
-*/

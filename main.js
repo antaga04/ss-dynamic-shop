@@ -18,9 +18,11 @@ linkPage("#cartLink", Cart);
 const app = document.querySelector("#app");
 
 app.addEventListener("change", (ev) => {
-  if (ev.target.matches('input[type="text"]')) {
+  if (ev.target.matches('input[id="searchInput"]')) {
     filterAlbums(Data, ev.target.value);
-    // console.log(ev.target.value);
+    const filtersBar = document.querySelector(".filters-bar");
+    filtersBar.style.display = "flex";
+    // console.log(ev.target);
   }
 });
 
@@ -30,7 +32,7 @@ const filterAlbums = (list, keyword) => {
       item.name.toLowerCase().includes(keyword.toLowerCase()) ||
       item.artist.toLowerCase().includes(keyword.toLowerCase())
   );
-  const oldMain = document.querySelector('main')
+  const oldMain = document.querySelector("main");
   oldMain.innerHTML = "";
   oldMain.innerHTML = AlbumList(filteredAlbums);
 };

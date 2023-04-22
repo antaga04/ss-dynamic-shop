@@ -1,4 +1,9 @@
+import { headerListeners } from "../../utils/listeners/headerListener";
+import { FiltersBar } from "../Filters/FiltersBar";
+import { FiltersMenu } from "../Filters/FiltersMenu";
 import "./header.css";
+
+const app = document.querySelector("#app");
 
 export const Header = () => {
   return `
@@ -13,48 +18,44 @@ export const Header = () => {
       </div>
     </section>
 
-      <header id="header">
-        <section class="header-container">
-          <article class="header-side left-side">
-            <div class="logo">
-              <a href="/" onclick="location.reload()">
-                <img src="https://res.cloudinary.com/drsfru9lj/image/upload/v1681568524/Rock%20Shop/solid-sounds-logo_vwl7d8.png" alt="SolidSounds Logo">
-                <h1>Solid Sounds</h1>
-              </a>
-            </div>
+    ${FiltersMenu()}
 
-            <article class="menu-container">
-              <div class="menu-list">
-                <button class="menu-btn">Menu<span>▾</span></button>
-                <ul class="flex nav">
-                  <li><a id="homeLink" href="#home">Home</a></li>
-                  <li><a id="shopLink" href="#shop">Shop</a></li>
-                  <li><a id="popularLink" href="#topsales">Top-Sales</a></li>
-                  <li><a id="aboutLink" href="#about">About</a></li>
-                </ul>
-              </div>
-            </article>
-          </article>
+    <header id="header">
+      <section class="header-container">
+        <article class="header-side left-side">
+          <div class="logo">
+            <a href="/" onclick="location.reload()">
+              <img src="https://res.cloudinary.com/drsfru9lj/image/upload/v1681568524/Rock%20Shop/solid-sounds-logo_vwl7d8.png" alt="SolidSounds Logo">
+              <h1>Solid Sounds</h1>
+            </a>
+          </div>
 
-          <article class="header-side">
-            <div class="search-bar">
-              <input type="text" class="ss-flex" id="searchInput" placeholder="Search..." />
-              <i class="fa-solid fa-magnifying-glass"></i>
+          <article class="menu-container">
+            <div class="menu-list">
+              <button class="menu-btn">Menu<span>▾</span></button>
+              <ul class="flex nav">
+                <li><a id="homeLink" href="#home">Home</a></li>
+                <li><a id="shopLink" href="#shop">Shop</a></li>
+                <li><a id="popularLink" href="#topsales">Top-Sales</a></li>
+                <li><a id="aboutLink" href="#about">About</a></li>
+              </ul>
             </div>
-            <a id="cartLink" href="#cart"><i class="fa-solid fa-cart-shopping"></i><span>[0]</span></a>
           </article>
-        </section>
-      </header>
+        </article>
+
+        <article class="header-side">
+          <div class="search-bar">
+            <input type="text" class="ss-flex" id="searchInput" placeholder="Search..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <a id="cartLink" href="#cart"><i class="fa-solid fa-cart-shopping"></i><span>[0]</span></a>
+        </article>
+      </section>
+
+      ${FiltersBar()}
+    </header>
   `;
 };
 
-const app = document.querySelector("#app");
-app.addEventListener("click", (event) => {
-  if (event.target.matches(".menu-btn")) {
-    const dropMenu = document.querySelector(".drop-menu");
-    const menuContent = document.querySelector(".mobile-menu");
-    console.log("yes");
-    dropMenu.classList.toggle("menu-mode");
-    menuContent.classList.toggle("menu-mode");
-  }
-});
+headerListeners(app, ".menu-btn", ".drop-menu", ".mobile-menu");
+headerListeners(app, ".add-btn", ".drop-filters", ".filters-menu");

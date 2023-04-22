@@ -12,7 +12,7 @@ export const About = () => {
   <div class="about-main">
     <h1>ABOUT</h1>
     <div>
-      <div style="text-align: center;">
+      <div>
         <p class="p1">&nbsp;</p>
         <p class="p1">&nbsp;</p>
         <p class="p1"><i>“MUSIC IS A UNIVERSAL LANGUAGE THAT UNITES US ALL, AND WE WANT TO BRING THE BEST OF IT TO YOUR EARS”</i></p>
