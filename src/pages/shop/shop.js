@@ -10,9 +10,13 @@ const main = document.createElement("main");
 export const Shop = (list) => {
   app.innerHTML = "";
   app.innerHTML = Header();
-  main.classList.add('fade-in')
-  main.innerHTML = AlbumList(Data);
 
+  main.classList.add("fade-in");
+  main.innerHTML = AlbumList(Data);
   app.appendChild(main);
+
+  const filtersBar = document.querySelector('.filters-bar');
+  filtersBar.style.display = 'flex';
+
   app.innerHTML += Footer();
 };

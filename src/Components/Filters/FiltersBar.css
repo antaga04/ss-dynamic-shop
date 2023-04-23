@@ -1,0 +1,36 @@
+.filters-bar {
+  min-height: fit-content;
+  display: none;
+  align-items: center;
+  gap: 1.2rem;
+  border-top: .5px solid #fff;
+}
+
+.filter-btn button{
+  border: none;
+  background-color: #0CC79E;
+  color: #fff;
+  padding: 1.1rem 1.6rem;
+
+}
+
+select {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  select/* , .clear-btn, .search-btn */ {
+    display: none;
+  }
+
+  .filters-bar {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .filter-btn button {
+    border-right: 1px solid #222;
+  }
+}

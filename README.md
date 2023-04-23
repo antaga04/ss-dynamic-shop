@@ -10,6 +10,9 @@ Dynamic Shop 2.0
   [] Determine filters with their style
   [] 
 
+- Colours
+   #D8D1C1
+   #E4DDCB
 #### --- Pages
 
 1. Home

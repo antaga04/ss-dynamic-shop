@@ -1,0 +1,78 @@
+/* ---- FILTER-LIST ---- */
+.filters-list {
+  width: 80vw;
+  min-width: 18rem;
+  margin-inline-start: .5rem;
+}
+
+.filters-list>ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: .5rem;
+  gap: .3rem;
+  margin: 0;
+}
+
+/* .filters-list label {
+  color: #fff;
+} */
+
+.checkBoxBtn {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  width: 100%;
+  padding: 0 .3rem;
+  border-radius: .3rem;
+}
+
+.checkBoxBtn * {
+  padding: .3rem 0;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.checkBoxBtn:hover {
+  color: #0CC79E;
+  /* border: 1px solid #0CC79E; */
+}
+
+.filters-list h4 {
+  border-top: 1px solid #0CC79E;
+  margin-top: .5rem;
+}
+
+.filters-list>* {
+  padding: .5rem;
+  text-transform: uppercase;
+}
+
+.title-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-filters>button {
+  padding: 0 .6rem;
+}
+
+.decade-list {
+  text-transform: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.genre-list>li>button {
+  background-color: transparent;
+  border: none;
+}
