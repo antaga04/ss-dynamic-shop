@@ -12,7 +12,7 @@ export const Cart = () => {
     <div class="popular-main">
       <h1>Cart</h1>
       <div>
-      Comming soon...
+        Comming soon...
       </div>
     </div>
   `;
