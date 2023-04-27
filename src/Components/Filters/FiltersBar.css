@@ -2,16 +2,20 @@
   min-height: fit-content;
   display: none;
   align-items: center;
-  gap: 1.2rem;
+  gap: .1rem;
   border-top: .5px solid #fff;
+}
+
+.filters-bar * {
+  text-transform: uppercase;
 }
 
 .filter-btn button{
   border: none;
   background-color: #0CC79E;
   color: #fff;
-  padding: 1.1rem 1.6rem;
-
+  /* padding: 1.1rem 1.6rem; */
+  padding: .8rem 1.6rem;
 }
 
 select {
