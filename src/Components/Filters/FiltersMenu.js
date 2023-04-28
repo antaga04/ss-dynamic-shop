@@ -5,8 +5,8 @@ export const FiltersMenu = () => {
   return `
     <section class="drop-filters">
     <div class="filter-content">
-    <div class="filters-list">
-      <div class="title-filters"><h2>Filters</h2></div>
+      <div class="filters-list">
+        <div class="title-filters"><h2>Filters</h2></div>
         <h4>Genre/Style</h4>
         <ul class="genre-list">
           ${Genres(Data)
@@ -23,29 +23,28 @@ export const FiltersMenu = () => {
         </ul>
         <h4>Price</h4>
         <div class="price-filter">
-          <input type="text" placeholder="min">
+          <input type="text" placeholder="min" id="min-input">
           <span>-</span>
-          <input type="text" placeholder="max">
+          <input type="text" placeholder="max" id="max-input">
         </div>
         <h4>Years</h4>
         <ul class="decade-list">
           <li><button class="checkBoxBtn">
-            <input type="checkbox" id="60s"><label for="60s">60s</label>
+            <input type="checkbox" id="60"><label for="60">60</label>
           </button></li>
           <li><button class="checkBoxBtn">
-            <input type="checkbox" id="70s"><label for="70s">70s</label>
+            <input type="checkbox" id="70"><label for="70">70</label>
           </button></li>
           <li><button class="checkBoxBtn">
-            <input type="checkbox" id="80s"><label for="80s">80s</label>
+            <input type="checkbox" id="80"><label for="80">80</label>
           </button></li>
           <li><button class="checkBoxBtn">
-            <input type="checkbox" id="90s"><label for="90s">90s
+            <input type="checkbox" id="90"><label for="90">90
           </button></li>
           <li><button class="checkBoxBtn">
-            <input type="checkbox" id="2000s"><label for="2000s">2000s</label>
+            <input type="checkbox" id="2000"><label for="2000">2000</label>
           </button></li>
         </ul>
-      </div>
       </div>
     </div>
   </section>
