@@ -30,19 +30,19 @@ export const FiltersMenu = () => {
         <h4>Years</h4>
         <ul class="decade-list">
           <li><button class="checkBoxBtn">
-            <input type="checkbox" id="60"><label for="60">60</label>
+            <input type="checkbox" id="60"><label for="60">60s</label>
           </button></li>
           <li><button class="checkBoxBtn">
-            <input type="checkbox" id="70"><label for="70">70</label>
+            <input type="checkbox" id="70"><label for="70">70s</label>
           </button></li>
           <li><button class="checkBoxBtn">
-            <input type="checkbox" id="80"><label for="80">80</label>
+            <input type="checkbox" id="80"><label for="80">80s</label>
           </button></li>
           <li><button class="checkBoxBtn">
             <input type="checkbox" id="90"><label for="90">90
           </button></li>
           <li><button class="checkBoxBtn">
-            <input type="checkbox" id="2000"><label for="2000">2000</label>
+            <input type="checkbox" id="2000"><label for="2000">2000s</label>
           </button></li>
         </ul>
       </div>
