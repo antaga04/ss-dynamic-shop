@@ -18,7 +18,7 @@
 
 .album-card:hover {
   box-shadow: 0 0 transparent, 0 0 transparent, 0 0.9rem 1.6rem rgba(0, 0, 0, .2);
-  transform: scale(1.01);
+  /* transform: scale(1.01); */
   /* transform: scale(0.99); */
 }
 
