@@ -18,7 +18,8 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
-@media screen and (max-width: 768px) {
+
+/* @media screen and (max-width: 768px) {
   .album-list {
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     padding: 0;
@@ -29,4 +30,4 @@
   .album-list {
     grid-template-columns: repeat(auto-fill, minmax(149px, 1fr));
   }
-}
+} */
