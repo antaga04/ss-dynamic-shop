@@ -1,4 +1,4 @@
-import { AlbumList } from "/Users/adranta/RockTheCode/proyecto-2.0-dynamic-store-anta/src/Components/AlbumsList/AlbumsList";
+import { AlbumList } from "../../Components/AlbumsList/AlbumsList";
 
 export const headerListeners = (target, match, drop, content) => {
   target.addEventListener("click", (event) => {
