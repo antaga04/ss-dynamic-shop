@@ -1,4 +1,5 @@
-import "./newCard.css";
+// import "./newCard.css";
+import "../gpt.css";
 
 export const AlbumCard = (album) => {
   return `
@@ -9,7 +10,7 @@ export const AlbumCard = (album) => {
       <h5>${album.artist}</h5>
       <p>${album.price}€</p>
       <div class="buy-btn--container">
-        <button>Add to Cart</i></button>
+        <button>Add to Cart</button>
       </div>
     </article>
   `;

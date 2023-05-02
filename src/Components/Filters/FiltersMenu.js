@@ -42,7 +42,7 @@ export const FiltersMenu = () => {
             <input type="checkbox" id="90"><label for="90">90
           </button></li>
           <li><button class="checkBoxBtn">
-            <input type="checkbox" id="2000"><label for="2000">2000s</label>
+            <input type="checkbox" id="0"><label for="0">2000s</label>
           </button></li>
         </ul>
       </div>
