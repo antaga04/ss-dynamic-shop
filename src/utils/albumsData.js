@@ -389,7 +389,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1680974710/Rock%20Shop/Use_Your_Illusion_ihmhdk.webp",
     year: 1991,
-    genre: "Hard rock",
+    genre: "Hard Rock",
     price: 30,
     stock: [true, 2],
   },
@@ -465,7 +465,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1680974709/Rock%20Shop/get_a_grip_uyvb3s.webp",
     year: 1993,
-    genre: "Hard rock",
+    genre: "Hard Rock",
     price: 26,
     stock: [true, 3],
   },
@@ -697,7 +697,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1680975214/Rock%20Shop/highwawy_to_hell_ddzp9w.webp",
     year: 1979,
-    genre: "Hard rock",
+    genre: "Hard Rock",
     price: 25,
     stock: [true, 8],
   },
@@ -715,7 +715,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1680975214/Rock%20Shop/who_made_who_hsjkzc.webp",
     year: 1986,
-    genre: "Hard rock",
+    genre: "Hard Rock",
     price: 22,
     stock: [true, 6],
   },

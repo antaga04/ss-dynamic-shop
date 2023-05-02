@@ -3,15 +3,15 @@ import { Home } from "./src/pages/home/home";
 import { Shop } from "./src/pages/shop/shop";
 import { linkPage } from "./src/utils/linkPage";
 import { About } from "./src/pages/about/about";
-import { Popular } from "./src/pages/popular/popular";
+import { TopSales } from "./src/pages/topSales/topSales";
 import { Cart } from "./src/pages/cart/cart";
 import { Data } from "./src/utils/albumsData";
 import { AlbumList } from "./src/Components/AlbumsList/AlbumsList";
 
-Home();
+Shop();
 linkPage("#homeLink", Home);
 linkPage("#shopLink", Shop);
-linkPage("#popularLink", Popular);
+linkPage("#topSalesLink", TopSales);
 linkPage("#aboutLink", About);
 linkPage("#cartLink", Cart);
 
