@@ -8,7 +8,7 @@ import { Cart } from "./src/pages/cart/cart";
 import { Data } from "./src/utils/albumsData";
 import { AlbumList } from "./src/Components/AlbumsList/AlbumsList";
 
-Shop();
+Home();
 linkPage("#homeLink", Home);
 linkPage("#shopLink", Shop);
 linkPage("#topSalesLink", TopSales);
