@@ -10,8 +10,8 @@ export const FiltersBar = () => {
       <div>
         <select id="name-sort">
           <option value="">Sort by</option>
-          <option value="asc">Ascendente</option>
-          <option value="desc">Descendente</option>
+          <option value="asc">A-Z</option>
+          <option value="desc">Z-A</option>
         </select>
       </div>
       <div class="filter-btn"><button class="search-btn">Search</button></div>

@@ -23,6 +23,7 @@ select {
   border: none;
   color: #fff;
   outline: none;
+  margin: 0 .8rem;
 }
 
 @media screen and (max-width: 500px) {
