@@ -377,7 +377,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1680974710/Rock%20Shop/the_wall_ctkubt.webp",
     year: 1979,
-    genre: "Progressive rock",
+    genre: "Progressive Rock",
     price: 25,
     stock: [true, 3],
   },
@@ -435,7 +435,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1680974709/Rock%20Shop/fly_by_night_db22im.webp",
     year: 1975,
-    genre: "Progressive rock",
+    genre: "Progressive Rock",
     price: 24,
     stock: [true, 2],
   },
@@ -447,7 +447,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1680974710/Rock%20Shop/test_for_echo_ij23qx.webp",
     year: 1996,
-    genre: "Progressive rock",
+    genre: "Progressive Rock",
     price: 28,
     stock: [true, 1],
   },
@@ -482,7 +482,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1680974710/Rock%20Shop/toxicity_nt9yzq.webp",
     year: 2001,
-    genre: "Alternative metal",
+    genre: "Alternative Metal",
     price: 21,
     stock: [true, 5],
   },
@@ -573,7 +573,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1678902392/Rock%20Shop/Revolver_hmkgau.webp",
     year: 1966,
-    genre: "Rock Psicodélico",
+    genre: "Psychedelic Rock",
     price: 20,
     stock: [true, 5],
   },
@@ -649,7 +649,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1678902392/Rock%20Shop/Wish_You_Were_Here_nlzy5u.webp",
     year: 1975,
-    genre: "Rock Progresivo",
+    genre: "Progressive Rock",
     price: 20,
     stock: [true, 5],
   },
@@ -674,7 +674,7 @@ export const Data = [
     cover:
       "https://res.cloudinary.com/drsfru9lj/image/upload/v1678902392/Rock%20Shop/A_Night_at_the_Opera_oqvcjh.webp",
     year: 1975,
-    genre: "Rock Progresivo",
+    genre: "Progressive Rock",
     price: 20,
     stock: [true, 5],
   },
