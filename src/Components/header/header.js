@@ -1,5 +1,5 @@
 import { Data } from "../../utils/albumsData";
-import { headerListeners, yes } from "../../utils/listeners/headerListener";
+import { handleDrop, handleFilters } from "../../utils/listeners";
 import { FiltersBar } from "../Filters/FiltersBar";
 import { FiltersMenu } from "../Filters/FiltersMenu";
 import { Menu } from "../dropMenu/menu";
@@ -47,9 +47,8 @@ export const Header = () => {
       ${FiltersBar()}
     </header>
   `;
-  // filterListeners()
 };
 
-headerListeners(app, ".menu-btn", ".drop-menu", ".mobile-menu");
-headerListeners(app, ".add-btn", ".drop-filters", ".filter-content");
-yes(app, ".search-btn",".drop-filters", ".filter-content", Data);
+handleDrop(app, ".menu-btn", ".drop-menu", ".mobile-menu");
+handleDrop(app, ".add-btn", ".drop-filters", ".filter-content");
+handleFilters(app, ".search-btn", ".clear-btn", ".drop-filters", ".filter-content", Data);
