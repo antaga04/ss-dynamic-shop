@@ -85,21 +85,13 @@ export const removeFilters = (drop, content) => {
 };
 
 export const getFilteredData = (data, selectedBoxes, minPrice, maxPrice) => {
-  const priceRange = getInPriceRange(
-    data,
-    minPrice,
-    maxPrice
-  );
+  const priceRange = getInPriceRange(data, minPrice, maxPrice);
   const albumsGenre = getAlbumsGenre(data, selectedBoxes);
   const albumsYear = getAlbumsYear(data, selectedBoxes);
 
   return priceRange.filter((album) => {
-    const match1 = albumsGenre.find(
-      (genreAlbum) => album === genreAlbum
-    );
-    const match2 = albumsYear.find(
-      (yearAlbum) => album === yearAlbum
-    );
+    const match1 = albumsGenre.find((genreAlbum) => album === genreAlbum);
+    const match2 = albumsYear.find((yearAlbum) => album === yearAlbum);
     return match1 && match2;
   });
-}
+};
