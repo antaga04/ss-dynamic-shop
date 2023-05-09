@@ -14,6 +14,11 @@ export const Cart = () => {
       <div>
         Comming soon...
       </div>
+      <button data-open-modal>Open</button>
+      <dialog data-modal class="dialog-content">
+        <div>This is a modal</div>
+        <button data-close-modal>Close</button>
+      </dialog>
     </div>
   `;
 
