@@ -55,35 +55,41 @@ export const handleFilters = (target, search, clear, drop, content, data) => {
 };
 
 export const renderCdPage = (target, data) => {
-  const albumMap = new Map(data.map(album => [album.id, album]));
+  const albumMap = new Map(data.map((album) => [album.id, album]));
   target.addEventListener('click', (ev) => {
-    const match = ev.target.closest('[id]');
-    let dialog = document.querySelector('[album-modal]');
+    if (!ev.target.matches('#add-tocart')) {
+      const match = ev.target.closest('[id]');
+      let dialog = document.querySelector('[album-modal]');
 
-    if (match) {
-      const album = albumMap.get(match.id);
-      // console.log(album)
-      if (album) {
-        dialog.innerHTML = CdCard(album);
-        dialog.showModal();
+      if (match) {
+        const album = albumMap.get(match.id);
+        // console.log(album)
+        if (album) {
+          dialog.innerHTML = CdCard(album);
+          dialog.showModal();
+          functions.exitDialog(dialog);
+        }
+        if (ev.target.matches('[album-close-modal]')) {
+          const modal = document.querySelector('[album-modal]');
+          modal.close();
+          functions.exitDialog(dialog);
+        }
       }
     }
-    if (ev.target.matches('[album-close-modal]')) {
-      const modal = document.querySelector('[album-modal]');
-      modal.close();
-    }
-
-    dialog.addEventListener("click", e => {
-      const dialogDimensions = dialog.getBoundingClientRect()
-      if (
-        e.clientX < dialogDimensions.left ||
-        e.clientX > dialogDimensions.right ||
-        e.clientY < dialogDimensions.top ||
-        e.clientY > dialogDimensions.bottom
-      ) {
-        dialog.close()
-      }
-    })
   });
 };
 
+export const addToCart = (target, data, cart) => {
+  target.addEventListener('click', (ev) => {
+    if (ev.target.matches('#add-to-cart')) {
+      const albumId = ev.target.dataset.albumId;
+      console.log(albumId);
+      const album = data.find((album) => album.id === albumId);
+      console.log(album);
+      cart.addProduct(album);
+      localStorage.setItem('cart', JSON.stringify(cart.products));
+      console.log(cart);
+      // return cart;
+    }
+  });
+};

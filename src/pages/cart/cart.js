@@ -1,11 +1,15 @@
-import "./cart.css";
-import { Footer } from "../../Components/footer/footer";
-import { Header } from "../../Components/header/header";
+import './cart.css';
+import { Footer } from '../../Components/footer/footer';
+import { Header } from '../../Components/header/header';
+import { addToCart } from '../../utils/listeners';
+import { Data, cart } from '../../utils/albumsData';
+import { getCart } from '../../utils/functions';
+
+const app = document.querySelector('#app');
+const main = document.createElement('main');
 
 export const Cart = () => {
-  const app = document.querySelector("#app");
-  app.innerHTML = "";
-  const main = document.createElement("main");
+  app.innerHTML = '';
   app.innerHTML = Header();
 
   main.innerHTML = `
@@ -14,14 +18,12 @@ export const Cart = () => {
       <div>
         Comming soon...
       </div>
-      <button data-open-modal>Open</button>
-      <dialog data-modal class="dialog-content">
-        <div>This is a modal</div>
-        <button data-close-modal>Close</button>
-      </dialog>
     </div>
   `;
 
   app.appendChild(main);
   app.innerHTML += Footer();
 };
+
+getCart(cart);
+addToCart(app, Data, cart);

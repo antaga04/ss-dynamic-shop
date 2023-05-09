@@ -41,14 +41,10 @@ export const getAlbumsGenre = (products, filtersSelected) => {
 
 export const getAlbumsYear = (products, filtersSelected) => {
   const filteredAlbums = products.filter((album) => {
-    if (
-      filtersSelected.includes(
-        ((Math.floor(album.year / 10) * 10) % 100).toString()
-      )
-    ) {
+    if (filtersSelected.includes(((Math.floor(album.year / 10) * 10) % 100).toString())) {
       return true;
     }
-    if (filtersSelected.includes("0") && album.year >= 2000) {
+    if (filtersSelected.includes('0') && album.year >= 2000) {
       return true;
     }
     return false;
@@ -80,8 +76,8 @@ export const removeFilters = (drop, content) => {
   /* dejamos de mostrar los filtros */
   const dropFilters = document.querySelector(drop);
   const filterContent = document.querySelector(content);
-  dropFilters.classList.remove("menu-mode");
-  filterContent.classList.remove("menu-mode");
+  dropFilters.classList.remove('menu-mode');
+  filterContent.classList.remove('menu-mode');
 };
 
 export const getFilteredData = (data, selectedBoxes, minPrice, maxPrice) => {
@@ -95,3 +91,35 @@ export const getFilteredData = (data, selectedBoxes, minPrice, maxPrice) => {
     return match1 && match2;
   });
 };
+
+export const getCart = (cart) => {
+  /* const numberOfCd = document.querySelector('[number-of-cds]');
+  console.log(numberOfCd.innerHTML) */
+  // Recuperar el carrito de Local Storage
+  const cartData = localStorage.getItem('cart');
+
+  // Si hay datos en Local Storage, convertirlos en un objeto de JavaScript
+  if (cartData) {
+    const cartProducts = JSON.parse(cartData);
+
+    // Agregar los productos del carrito al objeto cart
+    cart.products = cartProducts;
+    if (cart.product) {
+      numberOfCd.innerHTML = cart.product.lenght;
+    }
+  }
+};
+
+export const exitDialog = (dialog) => {
+  dialog.addEventListener('click', (e) => {
+    const dialogDimensions = dialog.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      dialog.close();
+    }
+  });
+}

@@ -1,3 +1,5 @@
+import { getCart } from "./functions";
+
 export const Data = [
   {
     name: 'Rage Against the Machine',
@@ -1261,3 +1263,10 @@ export const Data = [
     id: 'album-1683488134511-322132',
   },
 ];
+
+export const cart = {
+  products: [],
+  addProduct: function (product) {
+    this.products.push(product);
+  },
+};
