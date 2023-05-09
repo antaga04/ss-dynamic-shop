@@ -5,10 +5,10 @@ export const Menu = () => {
     <section class="drop-menu">
       <div class="menu-content">
         <ul class="mobile-menu">
-          <li><a id="homeLink" href="#home">Home</a></li>
-          <li><a id="shopLink" href="#shop">Shop</a></li>
-          <li><a id="topSalesLink" href="#topsales">Top Sales</a></li>
-          <li><a id="aboutLink" href="#about">About</a></li>
+          <li><a id="homeLink">Home</a></li>
+          <li><a id="shopLink">Shop</a></li>
+          <li><a id="topSalesLink">Top Sales</a></li>
+          <li><a id="aboutLink">About</a></li>
         </ul>
       </div>
     </section>

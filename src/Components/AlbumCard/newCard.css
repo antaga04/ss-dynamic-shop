@@ -1,11 +1,10 @@
-.album-card>img {
+/* .album-card>img {
   width: 14.56rem;
   height: 13.52rem;
   object-fit: cover;
 }
 
 .album-card {
-  /* width: 15rem; */
   background-color: var(--ss-card-color);
   box-shadow: 0 0 transparent, 0 0 transparent, 0 0.2rem 0.4rem rgba(0, 0, 0, .05);
   display: flex;
@@ -68,3 +67,4 @@
 .buy-btn--container>button:hover {
   background-color: rgba(255,164,28, 1);
 }
+ */

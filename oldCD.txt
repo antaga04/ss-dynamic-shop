@@ -1,0 +1,70 @@
+cdcard.js
+/* export const CdCard = (album) => {
+  return `
+    <article class="cd-page flex">
+      <section class="cd-left--view">
+        <img class="sub" src=${album.cover} alt='${album.name}' />
+      </section>
+      <section  class="cd-right--view">
+        <h2>${album.name}</h2>
+        <h3>${album.artist}</h3>
+        <ul class="flex">[
+          ${album.members.map(member => {
+            return `<li>${member}</li>`
+          }).join("")}]
+        </ul>
+        <p>${album.price}€</p>
+        <div class="buy-btn--container">
+          <button>Add to Cart</button>
+        </div>
+      </section>
+    </article>
+  `;
+}; */
+
+{/* <img class="super" src="https://res.cloudinary.com/drsfru9lj/image/upload/v1681747699/Rock%20Shop/tl_izzt88.webp" alt="cover"> */}
+
+main.js
+app.addEventListener('click', (ev) => {
+  if (ev.target.matches('[data-open-modal]')) {
+    const modal = document.querySelector('[data-modal]');
+    console.log(ev.target);
+    modal.showModal();
+  }
+  if (ev.target.matches('[data-close-modal]')) {
+    const modal = document.querySelector('[data-modal]');
+    modal.close();
+  }
+});
+
+app.addEventListener('click', (ev) => {
+  if (ev.target.matches('[album-open-modal]')) {
+    const modal = document.querySelector('[album-modal]');
+    console.log(ev.target);
+    modal.showModal();
+  }
+  if (ev.target.matches('[album-close-modal]')) {
+    const modal = document.querySelector('[album-modal]');
+    modal.close();
+  }
+});
+
+renderCdPage(app, Data);
+
+listener.js
+export const renderCdPage = (target, data) => {
+  const albumMap = new Map(data.map(album => [album.id, album]));
+  target.addEventListener('click', (ev) => {
+    const match = ev.target.closest('[id]');
+    if (match) {
+      const album = albumMap.get(match.id);
+      // const result = data.find((obj) => obj.id === album);
+      // console.log(album)
+      if (album) {
+        let main = document.querySelector('main');
+        main.innerHTML = '';
+        main.innerHTML = CdCard(album);
+      }
+    }
+  });
+};

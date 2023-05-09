@@ -1,14 +1,14 @@
 /* ------ NAV ------ */
 .drop-menu {
-  visibility: hidden;
-  transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
-  position: fixed;
-  background-color: rgba(34, 34, 34, .85);
   backdrop-filter: blur(10px);
-  width: 100%;
+  background-color: rgba(34, 34, 34, .85);
   height: 100vh;
-  z-index: 2;
   opacity: 0;
+  position: fixed;
+  transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
+  visibility: hidden;
+  width: 100%;
+  z-index: 2;
 }
 
 .drop-menu * {

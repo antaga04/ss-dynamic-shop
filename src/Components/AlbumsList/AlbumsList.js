@@ -19,6 +19,8 @@ export const AlbumList = (list, names, number, indexes) => {
     filteredList = list;
   }
   return `
+    <dialog album-modal class="dialog-content">
+    </dialog>
     <article class="ss-noise">    
       <section id="album-list">
         <section class="album-list flex">
