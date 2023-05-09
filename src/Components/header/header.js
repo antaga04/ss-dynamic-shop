@@ -40,7 +40,7 @@ export const Header = () => {
             <input type="text" class="ss-flex" id="searchInput" placeholder="Search..." />
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <a id="cartLink" href="#cart"><i class="fa-solid fa-cart-shopping"></i><span>[0]</span></a>
+          <a id="cartLink" href="#cart"><i class="fa-solid fa-cart-shopping"></i><span number-of-cds>[0]</span></a>
         </article>
       </section>
 

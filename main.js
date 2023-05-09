@@ -38,28 +38,4 @@ const filterAlbums = (list, keyword) => {
   oldMain.innerHTML = AlbumList(filteredAlbums);
 };
 
-app.addEventListener('click', (ev) => {
-  if (ev.target.matches('[data-open-modal]')) {
-    const modal = document.querySelector('[data-modal]');
-    console.log(ev.target);
-    modal.showModal();
-  }
-  if (ev.target.matches('[data-close-modal]')) {
-    const modal = document.querySelector('[data-modal]');
-    modal.close();
-  }
-});
-
-// app.addEventListener('click', (ev) => {
-//   if (ev.target.matches('[album-open-modal]')) {
-//     const modal = document.querySelector('[album-modal]');
-//     console.log(ev.target);
-//     modal.showModal();
-//   }
-//   if (ev.target.matches('[album-close-modal]')) {
-//     const modal = document.querySelector('[album-modal]');
-//     modal.close();
-//   }
-// });
-
 renderCdPage(app, Data);

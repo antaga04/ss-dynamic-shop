@@ -1,6 +1,6 @@
 // import "./newList.css";
-import "../gpt.css";
-import { AlbumCard } from "../AlbumCard/AlbumCard";
+import '../gpt.css';
+import { AlbumCard } from '../AlbumCard/AlbumCard';
 
 export const AlbumList = (list, names, number, indexes) => {
   let filteredList = [];
@@ -24,7 +24,7 @@ export const AlbumList = (list, names, number, indexes) => {
     <article class="ss-noise">    
       <section id="album-list">
         <section class="album-list flex">
-          ${filteredList.map((album) => AlbumCard(album)).join("")}
+          ${filteredList.map((album) => AlbumCard(album)).join('')}
         </section>
       </section>
     </article>
