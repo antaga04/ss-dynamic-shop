@@ -1,4 +1,4 @@
-import { AlbumList } from '../Components/AlbumsList/AlbumsList';
+import { AlbumList, notFound } from '../Components/AlbumsList/AlbumsList';
 import { CdCard } from '../Components/cdCard/cdCard';
 import * as functions from './functions';
 
@@ -47,14 +47,7 @@ export const handleFilters = (target, search, clear, drop, content, data) => {
         oldMain.innerHTML = '';
         oldMain.innerHTML = AlbumList(filteredData);
       } else {
-        oldMain.innerHTML = `
-      <article class="ss-noise">    
-        <section id="album-list">
-          <section class="album-list flex">
-            No albums found...
-          </section>
-        </section>
-      </article>`;
+        oldMain.innerHTML = notFound();
       }
     }
 

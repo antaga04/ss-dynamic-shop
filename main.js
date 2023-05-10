@@ -6,8 +6,9 @@ import { About } from './src/pages/about/about';
 import { TopSales } from './src/pages/topSales/topSales';
 import { Cart } from './src/pages/cart/cart';
 import { Data } from './src/utils/albumsData';
-import { AlbumList } from './src/Components/AlbumsList/AlbumsList';
+import { AlbumList, notFound } from './src/Components/AlbumsList/AlbumsList';
 import { renderCdPage } from './src/utils/listeners';
+import { isEmpty } from './src/utils/functions';
 
 Home();
 linkPage('#homeLink', Home);
@@ -35,7 +36,37 @@ const filterAlbums = (list, keyword) => {
   );
   const oldMain = document.querySelector('main');
   oldMain.innerHTML = '';
-  oldMain.innerHTML = AlbumList(filteredAlbums);
+  if (isEmpty(filteredAlbums)) {
+    oldMain.innerHTML = notFound();
+  } else {
+    oldMain.innerHTML = AlbumList(filteredAlbums);
+  }
 };
+
+function sort(albums, order) {
+  const newData = order === 'desc'
+    ? albums.slice().sort((a, b) => b.name.localeCompare(a.name))
+    : albums.slice().sort((a, b) => a.name.localeCompare(b.name));
+
+  return newData;
+}
+
+
+app.addEventListener('change', (ev) => {
+  if (ev.target.matches('#name-sort')) {
+    const oldMain = document.querySelector('main');
+    oldMain.innerHTML = '';
+
+    if (ev.target.value === '-') {
+      oldMain.innerHTML = AlbumList(Data);
+    } else {
+      const sortedAlbums = sort(Data, ev.target.value);
+      oldMain.innerHTML = ev.target.value != 'asc' && ev.target.value != 'desc'
+        ? AlbumList(Data)
+        : AlbumList(sortedAlbums);
+    }
+    
+  }
+});
 
 renderCdPage(app, Data);

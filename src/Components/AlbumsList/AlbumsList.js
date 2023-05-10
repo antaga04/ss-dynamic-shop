@@ -29,3 +29,14 @@ export const AlbumList = (list, names, number, indexes) => {
     </article>
   `;
 };
+
+export const notFound = () => {
+  return `
+      <article class="ss-noise">    
+        <section id="album-list">
+          <section class="album-list flex">
+            No albums found...
+          </section>
+        </section>
+      </article>`;
+};
