@@ -3,10 +3,10 @@ import "./FiltersMenu.css";
 
 export const FiltersMenu = () => {
   return `
-    <section class="drop-filters">
+    <dialog class="drop-filters">
     <div class="filter-content">
       <div class="filters-list">
-        <div class="title-filters"><h2>Filters</h2></div>
+        <div class="title-filters"><h2>Filters</h2><button id="close-filters-btn" album-close-modal>Close</button></div>
         <h4>Genre/Style</h4>
         <ul class="genre-list">
           ${Genres(Data)
@@ -47,7 +47,7 @@ export const FiltersMenu = () => {
         </ul>
       </div>
     </div>
-  </section>
+  </dialog>
   `;
 };
 

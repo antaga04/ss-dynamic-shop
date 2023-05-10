@@ -72,12 +72,10 @@ export const isEmpty = (filtersSelected) => {
   return filtersSelected.length === 0;
 };
 
-export const removeFilters = (drop, content) => {
+export const removeModal = () => {
   /* dejamos de mostrar los filtros */
-  const dropFilters = document.querySelector(drop);
-  const filterContent = document.querySelector(content);
-  dropFilters.classList.remove('menu-mode');
-  filterContent.classList.remove('menu-mode');
+  const modal = document.querySelector('.drop-filters');
+  modal.close();
 };
 
 export const getFilteredData = (data, selectedBoxes, minPrice, maxPrice) => {
@@ -122,4 +120,4 @@ export const exitDialog = (dialog) => {
       dialog.close();
     }
   });
-}
+};
