@@ -17,7 +17,6 @@
 }
 
 .drop-menu.menu-mode {
-  display: flex;
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
@@ -27,6 +26,5 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: 0 10%;
 }
