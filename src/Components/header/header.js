@@ -1,11 +1,11 @@
-import { Data } from "../../utils/albumsData";
-import { handleDrop, handleFilters } from "../../utils/listeners";
-import { FiltersBar } from "../Filters/FiltersBar";
-import { FiltersMenu } from "../Filters/FiltersMenu";
-import { Menu } from "../dropMenu/menu";
-import "./header.css";
+import { Data } from '../../utils/albumsData';
+import { handleDialog, handleDrop, handleFilters } from '../../utils/listeners';
+import { FiltersBar } from '../Filters/FiltersBar';
+import { FiltersMenu } from '../Filters/FiltersMenu';
+import { Menu } from '../dropMenu/menu';
+import './header.css';
 
-const app = document.querySelector("#app");
+const app = document.querySelector('#app');
 
 export const Header = () => {
   return `
@@ -49,6 +49,6 @@ export const Header = () => {
   `;
 };
 
-handleDrop(app, ".menu-btn", ".drop-menu", ".mobile-menu");
-handleDrop(app, ".add-btn", ".drop-filters", ".filter-content");
-handleFilters(app, ".search-btn", ".clear-btn", ".drop-filters", ".filter-content", Data);
+handleDrop(app, '.menu-btn', '.drop-menu');
+handleDialog(app, '.add-btn', '.drop-filters', '#close-filters-btn');
+handleFilters(app, '.search-btn', '.clear-btn', '.drop-filters', '.filter-content', Data);

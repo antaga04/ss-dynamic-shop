@@ -2,13 +2,27 @@ import { AlbumList } from '../Components/AlbumsList/AlbumsList';
 import { CdCard } from '../Components/cdCard/cdCard';
 import * as functions from './functions';
 
-export const handleDrop = (target, match, drop, content) => {
+export const handleDrop = (target, match, drop) => {
   target.addEventListener('click', (event) => {
     if (event.target.closest(match)) {
       const dropFilters = document.querySelector(drop);
-      const filterContent = document.querySelector(content);
       dropFilters.classList.toggle('menu-mode');
-      filterContent.classList.toggle('menu-mode');
+    }
+  });
+};
+
+export const handleDialog = (target, match, drop, close) => {
+  target.addEventListener('click', (ev) => {
+    if (ev.target.closest(match)) {
+      const modal = document.querySelector('.drop-filters');
+      const header = document.getElementById('header');
+
+      modal.style.height = window.innerHeight - header.offsetHeight - 32 + 'px';
+      modal.style.top = header.offsetHeight + 'px';
+      modal.show();
+    }
+    if (ev.target.closest(close)) {
+      functions.removeModal();
     }
   });
 };
@@ -26,7 +40,8 @@ export const handleFilters = (target, search, clear, drop, content, data) => {
     if (event.target.closest(search)) {
       const filteredData = functions.getFilteredData(data, selectedBoxes, minPrice, maxPrice);
 
-      functions.removeFilters(drop, content);
+      // functions.removeFilters(drop, content);
+      functions.removeModal();
       // pintamos la lista con los datos filtrados
       if (!functions.isEmpty(filteredData)) {
         oldMain.innerHTML = '';
@@ -44,7 +59,6 @@ export const handleFilters = (target, search, clear, drop, content, data) => {
     }
 
     if (event.target.closest(clear)) {
-      functions.removeFilters(drop, content);
       oldMain.innerHTML = '';
       oldMain.innerHTML = AlbumList(data);
       // quitar los checked filters de la lista checkboxes
