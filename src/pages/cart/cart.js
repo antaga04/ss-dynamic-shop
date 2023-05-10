@@ -25,5 +25,5 @@ export const Cart = () => {
   app.innerHTML += Footer();
 };
 
-getCart(cart);
-addToCart(app, Data, cart);
+/* getCart(cart);
+addToCart(app, Data, cart); */

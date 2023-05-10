@@ -10,6 +10,12 @@
   text-transform: uppercase;
 }
 
+#mobile-add-btn,
+#mobile-clear-btn,
+#mobile-search-btn {
+  display: none;
+}
+
 .filter-btn button{
   border: none;
   background-color: #0CC79E;
@@ -27,7 +33,15 @@ select {
 }
 
 @media screen and (max-width: 500px) {
-  select/* , .clear-btn, .search-btn */ {
+  #mobile-add-btn,
+  #mobile-clear-btn,
+  #mobile-search-btn {
+    display: block;
+  }
+
+  .add-btn,
+  .clear-btn,
+  .search-btn {
     display: none;
   }
 

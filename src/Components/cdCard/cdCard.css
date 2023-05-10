@@ -10,6 +10,11 @@ dialog[album-modal] {
   width: 70%;
 }
 
+dialog::backdrop {
+  /* background-color: hsl(250, 100%, 50%, 0.25); */
+  background-color: rgba(34, 34, 34, .6);
+}
+
 .cd-page {
   font-family: Helvetica;
   font-family: 'Lato', sans-serif;

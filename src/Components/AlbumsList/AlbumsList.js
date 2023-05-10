@@ -1,5 +1,4 @@
-// import "./newList.css";
-import '../gpt.css';
+import './albumList.css';
 import { AlbumCard } from '../AlbumCard/AlbumCard';
 
 export const AlbumList = (list, names, number, indexes) => {
