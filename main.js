@@ -7,7 +7,6 @@ import { TopSales } from './src/pages/topSales/topSales';
 import { Cart } from './src/pages/cart/cart';
 import { Data } from './src/utils/albumsData';
 import { renderCdPage, renderSearchAlbums } from './src/utils/listeners';
-import { filterAlbums } from './src/utils/functions';
 
 const app = document.querySelector('#app');
 
