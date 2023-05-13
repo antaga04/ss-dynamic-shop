@@ -50,5 +50,5 @@ export const Header = () => {
 };
 
 handleDrop(app, '.menu-btn', '.drop-menu');
-handleDialog(app, '.add-btn', '.drop-filters', '#close-filters-btn');
-handleFilters(app, '.search-btn', '.clear-btn', '.drop-filters', '.filter-content', Data);
+handleDialog(app, '.add-btn', '#close-filters-btn');
+handleFilters(app, '.search-btn', '.clear-btn', Data);

@@ -11,7 +11,7 @@ export const handleDrop = (target, match, drop) => {
   });
 };
 
-export const handleDialog = (target, match, drop, close) => {
+export const handleDialog = (target, match, close) => {
   target.addEventListener('click', (ev) => {
     if (ev.target.closest(match)) {
       const modal = document.querySelector('.drop-filters');
@@ -27,8 +27,9 @@ export const handleDialog = (target, match, drop, close) => {
   });
 };
 
-export const handleFilters = (target, search, clear, drop, content, data) => {
+export const handleFilters = (target, search, clear, data) => {
   target.addEventListener('click', (event) => {
+    const searchInput = document.querySelector('#searchInput');
     const oldMain = document.querySelector('main');
     const minPrice = document.querySelector('#min-input');
     const maxPrice = document.querySelector('#max-input');
@@ -36,11 +37,9 @@ export const handleFilters = (target, search, clear, drop, content, data) => {
     const checkboxes = document.querySelectorAll('.checkBoxBtn input[type="checkbox"]:checked');
     const selectedBoxes = Array.from(checkboxes).map((checkbox) => checkbox.id);
 
-    // console.log(event.target)
     if (event.target.closest(search)) {
       const filteredData = functions.getFilteredData(data, selectedBoxes, minPrice, maxPrice);
 
-      // functions.removeFilters(drop, content);
       functions.removeModal();
       // pintamos la lista con los datos filtrados
       if (!functions.isEmpty(filteredData)) {
@@ -58,6 +57,9 @@ export const handleFilters = (target, search, clear, drop, content, data) => {
       checkboxes.forEach((checkbox) => {
         checkbox.checked = false;
       });
+      minPrice.value = '';
+      maxPrice.value = '';
+      searchInput.value = '';
     }
   });
 };
@@ -71,7 +73,6 @@ export const renderCdPage = (target, data) => {
 
       if (match) {
         const album = albumMap.get(match.id);
-        // console.log(album)
         if (album) {
           dialog.innerHTML = CdCard(album);
           dialog.showModal();
@@ -87,6 +88,35 @@ export const renderCdPage = (target, data) => {
   });
 };
 
+export const renderSortedAlbums = (target, Data) => {
+  target.addEventListener('change', (ev) => {
+    if (ev.target.matches('#name-sort')) {
+      const oldMain = document.querySelector('main');
+      oldMain.innerHTML = '';
+
+      if (ev.target.value === '-') {
+        oldMain.innerHTML = AlbumList(Data);
+      } else {
+        const sortedAlbums = functions.sortAlbums(Data, ev.target.value);
+        oldMain.innerHTML =
+          ev.target.value != 'asc' && ev.target.value != 'desc'
+            ? AlbumList(Data)
+            : AlbumList(sortedAlbums);
+      }
+    }
+  });
+};
+
+export const renderSearchAlbums = (target, Data) => {
+  target.addEventListener('change', (ev) => {
+    if (ev.target.matches('input[id="searchInput"]')) {
+      functions.filterAlbums(Data, ev.target.value);
+      const filtersBar = document.querySelector('.filters-bar');
+      filtersBar.style.display = 'flex';
+    }
+  });
+};
+
 export const addToCart = (target, data, cart) => {
   target.addEventListener('click', (ev) => {
     if (ev.target.matches('#add-to-cart')) {
@@ -97,7 +127,6 @@ export const addToCart = (target, data, cart) => {
       cart.addProduct(album);
       localStorage.setItem('cart', JSON.stringify(cart.products));
       console.log(cart);
-      // return cart;
     }
   });
 };

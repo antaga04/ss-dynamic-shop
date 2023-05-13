@@ -4,7 +4,7 @@ export const Footer = () => {
   return `
     <footer id="footer">
       <div>
-        <p>© 2023 Solid Sounds. All rights reserved.</p>
+        <p>© 2023 Solid Sounds. <span translate="yes">All rights reserved.</span></p>
       </div>
       <div>
         <ul class="flex social-icons">

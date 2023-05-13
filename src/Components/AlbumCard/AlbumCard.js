@@ -9,7 +9,10 @@ export const AlbumCard = (album) => {
       <h5 style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">${album.artist}</h5>
       <p>${album.price}€</p>
       <div class="buy-btn--container">
-        <button id="add-to-cart" data-album-id="${album.id}">Add to Cart</button>
+        <button id="add-to-cart" data-album-id="${album.id}">
+          <span class="desktop-addCart">Add to Cart</span>
+          <span class="mobile-addCart"><i class="fa-solid fa-cart-plus"></i></span>
+        </button>
       </div>
     </article>
   `;

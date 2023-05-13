@@ -2,13 +2,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  /* background-color: #222; */
-  /* background-color: #242424; */
-  /* background-color: #B6B6B6; */
-  /* color: rgba(255, 255, 255, 0.87); */
   background-color: #e5e1e1;
-  /* color-scheme: light dark; */
-  color: #000;;
+  color: #ffffff;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-synthesis: none;
   font-weight: 400;
@@ -121,17 +116,4 @@ main {
 
 .fade-in {
   animation: fadeIn 1s ease-in-out;
-}
-
-/* modal tryout */
-dialog[data-modal] {
-  background-color: white;
-  border: 1px solid black;
-  height: 80%;
-  left: 50%;
-  padding: 1rem;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
 }

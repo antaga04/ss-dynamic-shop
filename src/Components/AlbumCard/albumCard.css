@@ -49,6 +49,10 @@
   background-color: #F0CC44;
 }
 
+.mobile-addCart {
+  display: none;
+}
+
 .super {
   position: absolute;
   top: 1rem;
@@ -59,6 +63,13 @@
 }
 
 @media screen and (max-width: 500px) {
+  .desktop-addCart {
+    display: none;
+  }
+  
+  .mobile-addCart {
+    display: block;
+  }
   .album-card>img {
     width: 8.4rem;
     height: 7.8rem;

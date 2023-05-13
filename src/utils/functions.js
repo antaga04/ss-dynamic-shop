@@ -5,18 +5,23 @@
   4. si no hay coincidencias => debería mostrar "no coincidences..." 
 */
 
+import { AlbumList, notFound } from "../Components/AlbumsList/AlbumsList";
+
 export const getInPriceRange = (products, priceMin, priceMax) => {
   const minPrice = priceMin.value;
   const maxPrice = priceMax.value;
+  console.log(maxPrice);
+  console.log(minPrice);
   const filteredAlbums = products.filter((product) => {
     if (!isNaN(minPrice) && !isNaN(maxPrice)) {
       return product.price >= minPrice && product.price <= maxPrice;
-    } else if (isNaN(minPrice) && !isNaN(maxPrice)) {
+    }
+    if (isNaN(minPrice) && !isNaN(maxPrice)) {
+      console.log('hi');
       return product.price <= maxPrice;
-    } else if (!isNaN(minPrice) && isNaN(maxPrice)) {
+    }
+    if (!isNaN(minPrice) && isNaN(maxPrice)) {
       return product.price >= minPrice;
-    } else {
-      return true;
     }
   });
   if (!isEmpty(filteredAlbums)) {
@@ -90,6 +95,44 @@ export const getFilteredData = (data, selectedBoxes, minPrice, maxPrice) => {
   });
 };
 
+export const exitDialog = (dialog) => {
+  dialog.addEventListener('click', (e) => {
+    const dialogDimensions = dialog.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      dialog.close();
+    }
+  });
+};
+
+export const filterAlbums = (list, keyword) => {
+  const filteredAlbums = list.filter(
+    (item) =>
+      item.name.toLowerCase().includes(keyword.toLowerCase()) ||
+      item.artist.toLowerCase().includes(keyword.toLowerCase())
+  );
+  const oldMain = document.querySelector('main');
+  oldMain.innerHTML = '';
+  if (isEmpty(filteredAlbums)) {
+    oldMain.innerHTML = notFound();
+  } else {
+    oldMain.innerHTML = AlbumList(filteredAlbums);
+  }
+};
+
+export function sortAlbums(albums, order) {
+  const newData =
+    order === 'desc'
+      ? albums.slice().sort((a, b) => b.name.localeCompare(a.name))
+      : albums.slice().sort((a, b) => a.name.localeCompare(b.name));
+
+  return newData;
+}
+
 export const getCart = (cart) => {
   /* const numberOfCd = document.querySelector('[number-of-cds]');
   console.log(numberOfCd.innerHTML) */
@@ -106,18 +149,4 @@ export const getCart = (cart) => {
       numberOfCd.innerHTML = cart.product.lenght;
     }
   }
-};
-
-export const exitDialog = (dialog) => {
-  dialog.addEventListener('click', (e) => {
-    const dialogDimensions = dialog.getBoundingClientRect();
-    if (
-      e.clientX < dialogDimensions.left ||
-      e.clientX > dialogDimensions.right ||
-      e.clientY < dialogDimensions.top ||
-      e.clientY > dialogDimensions.bottom
-    ) {
-      dialog.close();
-    }
-  });
 };

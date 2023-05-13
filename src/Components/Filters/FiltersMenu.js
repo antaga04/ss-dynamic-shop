@@ -6,7 +6,8 @@ export const FiltersMenu = () => {
     <dialog class="drop-filters">
     <div class="filter-content">
       <div class="filters-list">
-        <div class="title-filters"><h2>Filters</h2><button id="close-filters-btn" album-close-modal>Close</button></div>
+        <button id="close-filters-btn" album-close-modal>Close</button>
+        <h2>Filters</h2>
         <h4>Genre/Style</h4>
         <ul class="genre-list">
           ${Genres(Data)
@@ -60,3 +61,5 @@ const Genres = (Data) => {
   });
   return genres;
 };
+
+{/* <div class="title-filters"><h2>Filters</h2><button id="close-filters-btn" album-close-modal>Close</button></div> */}
