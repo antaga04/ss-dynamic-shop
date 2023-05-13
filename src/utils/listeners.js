@@ -39,7 +39,6 @@ export const handleFilters = (target, search, clear, data) => {
 
     if (event.target.closest(search)) {
       const filteredData = functions.getFilteredData(data, selectedBoxes, minPrice, maxPrice);
-
       functions.removeModal();
       // pintamos la lista con los datos filtrados
       if (!functions.isEmpty(filteredData)) {
@@ -73,6 +72,7 @@ export const renderCdPage = (target, data) => {
 
       if (match) {
         const album = albumMap.get(match.id);
+        
         if (album) {
           dialog.innerHTML = CdCard(album);
           dialog.showModal();

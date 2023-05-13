@@ -63,6 +63,7 @@
 }
 
 @media screen and (max-width: 500px) {
+  
   .desktop-addCart {
     display: none;
   }
@@ -70,6 +71,7 @@
   .mobile-addCart {
     display: block;
   }
+  
   .album-card>img {
     width: 8.4rem;
     height: 7.8rem;

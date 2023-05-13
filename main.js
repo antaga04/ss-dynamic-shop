@@ -21,4 +21,3 @@ linkPage('#cartLink', Cart);
 
 // Event Listeners
 renderSearchAlbums(app, Data);
-renderCdPage(app, Data);
