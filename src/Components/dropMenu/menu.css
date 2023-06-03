@@ -28,3 +28,8 @@
   align-items: center;
   margin: 0 10%;
 }
+
+.menu-btn,
+.mobile-menu>li {
+  cursor: pointer;
+}

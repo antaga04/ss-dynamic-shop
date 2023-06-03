@@ -41,6 +41,7 @@ dialog::backdrop {
 [album-close-modal] {
   background-color: transparent;
   border: none;
+  cursor: pointer;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: .9rem;
   font-weight: 400;

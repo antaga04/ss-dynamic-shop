@@ -5,19 +5,17 @@
   4. si no hay coincidencias => debería mostrar "no coincidences..." 
 */
 
-import { AlbumList, notFound } from "../Components/AlbumsList/AlbumsList";
+import { AlbumList, notFound } from '../Components/AlbumsList/AlbumsList';
 
-export const getInPriceRange = (products, priceMin, priceMax) => {
+export const getInPriceRangeA = (products, priceMin, priceMax) => {
   const minPrice = priceMin.value;
   const maxPrice = priceMax.value;
-  console.log(maxPrice);
-  console.log(minPrice);
+
   const filteredAlbums = products.filter((product) => {
     if (!isNaN(minPrice) && !isNaN(maxPrice)) {
       return product.price >= minPrice && product.price <= maxPrice;
     }
     if (isNaN(minPrice) && !isNaN(maxPrice)) {
-      console.log('hi');
       return product.price <= maxPrice;
     }
     if (!isNaN(minPrice) && isNaN(maxPrice)) {
@@ -28,6 +26,33 @@ export const getInPriceRange = (products, priceMin, priceMax) => {
     return filteredAlbums;
   }
   return products;
+};
+
+export const getInPriceRange = (products, priceMin, priceMax) => {
+  const minPrice = priceMin.value;
+  const maxPrice = priceMax.value;
+
+  const isMinPriceANumber = isNaN(minPrice);
+  console.log(minPrice)
+  console.log(isMinPriceANumber)
+  const isMaxPriceANumber = !isNaN(maxPrice);
+
+  if (!isMinPriceANumber && !isMaxPriceANumber) return products;
+  const filteredAlbums = products.filter((product) => {
+    if (isMinPriceANumber && isMaxPriceANumber) {
+      console.log('1')
+      return product.price >= minPrice && product.price <= maxPrice;
+    }
+    if (isMinPriceANumber && !isMaxPriceANumber) {
+      console.log('2')
+      return product.price >= minPrice;
+    }
+    if (!isMinPriceANumber && isMaxPriceANumber) {
+      console.log('3')
+      return product.price <= maxPrice;
+    }
+  });
+  return isEmpty(filteredAlbums) ? [] : filteredAlbums;
 };
 
 export const getAlbumsGenre = (products, filtersSelected) => {
@@ -150,4 +175,3 @@ export const getCart = (cart) => {
     }
   }
 };
-

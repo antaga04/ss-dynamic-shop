@@ -1,3 +1,7 @@
+.album-card {
+  cursor: pointer;
+}
+
 .album-card>img {
   width: 14.56rem;
   height: 13.52rem;

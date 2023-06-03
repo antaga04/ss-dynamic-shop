@@ -20,6 +20,7 @@
   border: none;
   background-color: #0CC79E;
   color: #fff;
+  cursor: pointer;
   /* padding: 1.1rem 1.6rem; */
   padding: .8rem 1.6rem;
 }
@@ -28,6 +29,7 @@ select {
   background-color: transparent;
   border: none;
   color: #fff;
+  cursor: pointer;
   outline: none;
   margin: 0 .8rem;
 }
