@@ -61,5 +61,3 @@ const Genres = (Data) => {
   });
   return genres;
 };
-
-{/* <div class="title-filters"><h2>Filters</h2><button id="close-filters-btn" album-close-modal>Close</button></div> */}
