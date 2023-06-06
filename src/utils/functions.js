@@ -7,7 +7,7 @@
 
 import { AlbumList, notFound } from '../Components/AlbumsList/AlbumsList';
 
-export const getInPriceRangeA = (products, priceMin, priceMax) => {
+export const getInPriceRange = (products, priceMin, priceMax) => {
   const minPrice = priceMin.value;
   const maxPrice = priceMax.value;
 
@@ -28,7 +28,7 @@ export const getInPriceRangeA = (products, priceMin, priceMax) => {
   return products;
 };
 
-export const getInPriceRange = (products, priceMin, priceMax) => {
+export const getInPriceRangeB = (products, priceMin, priceMax) => {
   const minPrice = priceMin.value;
   const maxPrice = priceMax.value;
 
